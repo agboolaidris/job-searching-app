@@ -8,9 +8,11 @@ type Props = NativeStackScreenProps<RootStackParams, 'Restaurant'>;
 
 const Restaurant: React.FC<Props> = ({route}) => {
   return (
-    <SafeAreaView style={{marginHorizontal: 10}}>
+    <SafeAreaView style={{flex: 1}}>
       <Header />
-      <Text>Restaurant {route.params.id}</Text>
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Text>Restaurant {route.params.id}</Text>
+      </View>
     </SafeAreaView>
   );
 };
